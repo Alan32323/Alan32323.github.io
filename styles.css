@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+nav {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    font-size: 50px;
+    font-weight: 700;
+    float: left;
+    color:red;
+}
+
+nav ul {
+    list-style-type: none;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+section {
+    padding: 50px 20px;
+    margin: 30px 0;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.profile {
+    text-align: center;
+    flex: 1;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.profile h1 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #343a40;
+}
+
+.profile p {
+    font-size: 18px;
+    color: #777;
+}
+
+.about-text {
+    flex: 2;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #343a40;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+}
+
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #fff;
+    padding: 30px;
+    width: 45%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+}
+
+.project h3 {
+    font-size: 24px;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        display: none;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-container .skill-item {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    footer {
+        position: static;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile h1 {
+        font-size: 24px;
+    }
+
+    .about-text {
+        padding-left: 0;
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .skill-item {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .project h3 {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
